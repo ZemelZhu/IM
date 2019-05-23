@@ -1,0 +1,26 @@
+syntax = "proto2";
+package com.im.zemel.proto;
+option java_package = "com.im.zemel.protoBean";
+message CommonMsgPB {
+  required MessageType type= 1;    // 消息类型
+  optional int32 fromId=2;        // 发件人id
+  optional int32 toId = 3;         // 收件人id
+  optional string content=4;      // 消息内容
+  optional User user=5;             // 用户
+  optional string time = 6;           // 时间
+  optional int32 contentType = 7;     // 消息内容(0为文字，1为图片)
+}
+message User {
+  optional int32 uid = 1;
+  optional string password = 2;
+}
+message Body{
+
+}
+enum MessageType{
+  Msg =0;         // 消息
+  Login = 1;      // 登陆
+  NewFriend=3;    // 新好友
+  Error = 4;      // 错误
+  Ping = 5;       // 心跳
+}

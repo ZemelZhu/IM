@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <vimmone.blog.fragment.NoScrollViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.76"/>
+
+    <RadioGroup
+        android:id="@+id/rg_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/back"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/contentlist"
+            style="@style/bottom_tag_style"
+            android:drawableTop="@drawable/rb_home_drawable_selector"
+            android:gravity="center"
+            android:text="文章列表"
+            android:textSize="10sp"
+            />
+
+
+        <RadioButton
+            android:id="@+id/contentwrite"
+            style="@style/bottom_tag_style"
+            android:drawableTop="@drawable/rb_newscenter_drawable_selector"
+            android:gravity="center"
+            android:text="写作"
+            android:textSize="10sp"
+            />
+
+
+        <RadioButton
+            android:id="@+id/contentuser"
+            style="@style/bottom_tag_style"
+            android:drawableTop="@drawable/rb_setting_drawable_selector"
+            android:gravity="center"
+            android:text="个人中心"
+            android:textSize="10sp"
+            />
+
+
+
+    </RadioGroup>
+
+</LinearLayout>

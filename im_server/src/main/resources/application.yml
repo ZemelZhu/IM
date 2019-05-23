@@ -1,0 +1,73 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://120.78.164.110:3306/chat
+    username: root
+    password: 1234
+    tomcat:
+      max-idle: 4
+      min-idle: 3
+      max-active: 4
+      initial-size: 4
+      max-wait: 30000
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+  redis:
+    host: 120.78.164.110
+    port: 6379
+    password: 1234
+    timeout: 1000
+    database: 0
+    pool:
+      max-active: 10
+      max-idle: 8
+      min-idle: 2
+      max-wait: 100
+  mail:
+    username: 1326539792@qq.com
+    password: qlmniipmgyjegjef #密钥
+    properties:
+      mail:
+        smtp:
+          socketFactory:
+            class: javax.net.ssl.SSLSocketFactory
+            fallback: false
+            port: 465
+          port: 465
+          auth: true
+          starttls:
+            enable: true
+            required: true
+    host: smtp.qq.com
+  jackson:
+    serialization: false
+server:
+  port: 8081
+  context-path: /Blog
+  session:
+    timeout: 0  #永不超时
+
+#qiuqiu server message,design by vimmone
+
+accessKey: iDOLxWfs78SJngRaFtAxz3LdiEHdmKFed8jAu3D-
+secretKey: 7ib9lIogk_xxoWxyDJCIC1wBEg3TnduWb2nbGTM0
+bucketName: images  #server folder name
+host: http://img.vimmone.com/ #qiuqiu url
+resultParameter: url
+#scoket通讯配置
+net:
+  port: 5000
+  websocket: /websocket
+
+#用户默认头像
+userAvatar: http://file.vimmone.com/main.jpg
+
+# 系统管理员ID
+administrator: 123
+
+
+
+
+
